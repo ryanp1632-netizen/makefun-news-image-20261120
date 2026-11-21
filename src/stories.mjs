@@ -4,13 +4,13 @@ export const weekday = 'Friday';
 export const date = '20 November 2026';
 export const short = 'FRI 20 NOV 2026';
 export const stamp = 'FRIDAY 20 NOV 2026';
-export const stampSub = 'NEWS CHECKED TO 12:15 UTC';
-export const teaser = 'Russia fires ~100 missiles at Ukraine and hits Kyiv’s bridges · Asia’s AI sell-off deepens · UK and EU agree a Brexit reset · Cop31’s last day';
+export const stampSub = 'WHOLE DAY, TO MIDNIGHT UTC';
+export const teaser = 'Russia hits Kyiv’s bridges with ~100 missiles · AI sell-off sweeps Asia and Wall Street · UK–EU Brexit reset · Cop31 overtime';
 export const figures = [
   { v: '~100', l: 'Russian missiles fired at Ukraine overnight' },
   { v: '−6.2%', l: 'Taiwan’s Taiex: Asia’s worst fall on Friday' },
   { v: '£17bn', l: 'UK borrowing in October, £1bn under forecast' },
-  { v: '+0.7%', l: 'UK retail sales in October, on stockpiling' },
+  { v: '10%+', l: 'S&P 500 fall from its peak: a correction' },
   { v: 'M5.7', l: 'quake in Kumamoto, Japan; week-long alert' },
   { v: '$60bn', l: 'Kenya rare-earths mine awarded to US group' },
 ];
@@ -26,18 +26,18 @@ export const leads = [
       arrows: [{ from: [40.5, 50.6], to: [31.0, 50.5], color: '#ef4444', bend: 12 }, { from: [37.0, 46.3], to: [30.9, 50.1], color: '#ef4444', bend: 8, dash: '4 3' }, { from: [36.5, 49.3], to: [24.6, 49.9], color: '#f59e0b', bend: 20, dash: '4 3' }],
       syms: [{ name: 'missile', at: [38.6, 48.3], size: 26, c: '#fff', a: '#ef4444' }],
       flags: ['ua'], tag: 'OVERNIGHT · ~100 MISSILES', caption: 'KYIV · LVIV · NINE REGIONS', captionRight: '3 BRIDGES HIT' }),
-  L('Tokyo · Seoul · Taipei', 'eco', 'as', 121.5, 25.05,
-    'Asian stocks crash as fears of an AI bubble bite',
-    'Nikkei −5.1%, Kospi −5.2%, Taiex −6.2% after Anthropic’s debut; Taiwan’s worst five days since 1990.',
-    'Al Jazeera, Guardian',
-    { type: 'banner', bg: ['#0f1d3a', '#1e3a5f'], flags: ['jp', 'kr', 'tw'], syms: [['chartDown', '#cbd5e1', '#ef4444'], ['chip', '#cbd5e1', '#ef4444']], caption: 'NIKKEI −5.1 · KOSPI −5.2 · TAIEX −6.2' }),
+  L('Taipei · Tokyo · New York', 'eco', 'as', 121.5, 25.05,
+    'AI sell-off sweeps from Asia to Wall Street',
+    'Taiex −6.2%, Kospi −5.2%, Nikkei −5.1%; S&P 500 and Dow end in correction, Nasdaq’s worst week since 2020.',
+    'Reuters, Al Jazeera',
+    { type: 'banner', bg: ['#0f1d3a', '#1e3a5f'], flags: ['tw', 'jp', 'us'], syms: [['chartDown', '#cbd5e1', '#ef4444'], ['chip', '#cbd5e1', '#ef4444']], caption: 'TAIEX −6.2 · S&P 500 + DOW IN CORRECTION' }),
   L('Antalya, Türkiye', 'sci', 'me', 30.7, 36.9,
-    'Cop31 climate talks reach their last day split over fossil fuels',
-    'The draft deal drops any mention of fossil fuels. Pacific states warn of devastation, and the summit is expected to run past its official close.',
-    'Reuters, Guardian',
+    'Cop31 climate talks run into overtime, split over fossil fuels',
+    'Talks ran past Friday’s close with no deal; the draft drops all mention of fossil fuels, angering Pacific states.',
+    'Reuters, Al Jazeera',
     { type: 'map', win: [22, 33.2, 46, 43.2], marker: [30.7, 36.9], labels: [{ text: 'TÜRKIYE', at: [35, 39.4], size: 10 }, { text: 'ANTALYA', at: [31.8, 36.75], size: 8.5, color: '#7f1d1d', anchor: 'start' }, { text: 'MEDITERRANEAN', at: [27, 34.3], size: 7.5, color: '#93c5fd' }],
       syms: [{ name: 'thermometer', at: [41.5, 36.0], size: 32, c: '#fff', a: '#ef4444' }, { name: 'oil', at: [25.5, 39.8], size: 26, c: '#fff', a: '#1a1a1a' }],
-      flags: ['un', 'tr'], tag: 'COP31 · FINAL DAY', caption: 'UN CLIMATE SUMMIT', captionRight: 'FOSSIL FUELS CUT FROM DRAFT' }),
+      flags: ['un', 'tr'], tag: 'COP31 · OVERTIME', caption: 'UN CLIMATE SUMMIT', captionRight: 'FOSSIL FUELS CUT FROM DRAFT' }),
 ];
 
 const C = (place, cat, region, lon, lat, head, sum, src, bannerSpec) => ({ place, cat, region, lon, lat, head, sum, src, banner: bannerSpec });
@@ -79,8 +79,6 @@ export const briefs = [
   B('Kumamoto', 'sci', 'as', 130.7, 32.8, 'M5.7 quake injures two; alert issued', 'Arab News'),
   B('Tokyo', 'eco', 'as', 139.7, 35.7, 'Japan Tobacco: ¥1.38tn Russia loss', 'Nikkei'),
   B('Hong Kong', 'cul', 'as', 114.17, 22.3, 'Lakshya Sen into Hong Kong Open semis', 'ANI'),
-  B('Kathmandu', 'pol', 'as', 85.32, 27.7, 'PM Balendra Shah to visit India', 'Reuters'),
-  B('Kuno, India', 'sci', 'as', 77.1, 25.6, 'Cheetah cubs take India’s count to 62', 'Indian Exp.'),
   B('Doha', 'cul', 'oc', 51.53, 25.29, 'Australia stun Argentina 2-0 at U17 WC', 'Guardian'),
   B('Sydney', 'sci', 'oc', 151.2, -33.87, 'Etomidate vapes put three in hospital', 'Guardian'),
   B('Gaza', 'war', 'me', 34.45, 31.5, '85% of rescue vehicles out of service', 'AJ'),
@@ -92,6 +90,8 @@ export const briefs = [
   B('Washington', 'pol', 'am', -77.04, 38.9, 'Trump fires cyber director Cairncross', 'Cybernews'),
   B('Cincinnati', 'cul', 'am', -84.51, 39.1, 'Fiona the hippo dies after eating a hat', 'WVXU'),
   B('Haiti', 'war', 'am', -72.34, 18.54, 'Police say 34 gang members killed', 'EFE'),
+  B('Washington', 'eco', 'am', -76.6, 38.4, 'Trump signs law ending the penny', 'CBS News'),
+  B('White House', 'pol', 'am', -78.0, 38.2, 'Trump defends Putin after Asia trip', 'CNN'),
   B('Lima', 'eco', 'am', -77.03, -12.05, 'Japan and Peru team up on minerals', 'Mainichi'),
   B('Los Angeles', 'sci', 'am', -118.16, 34.0, 'M4.4 quake near Commerce before dawn', 'ABC News'),
 ];
